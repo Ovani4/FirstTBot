@@ -7,8 +7,9 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 
 public class Bot extends TelegramLongPollingBot {
-    public static void main(String[] args) throws TelegramApiException {
+    BotPas bp = new BotPas();
 
+    public static void main(String[] args) throws TelegramApiException {
 
         TelegramBotsApi telegramBotsApi = new TelegramBotsApi(DefaultBotSession.class);
         try {
@@ -19,12 +20,10 @@ public class Bot extends TelegramLongPollingBot {
     }
 
     public String getBotUsername() {
-        BotPas bp = new BotPas();
         return bp.getName();
     }
 
     public String getBotToken() {
-        BotPas bp = new BotPas();
         return bp.getKey();
     }
 
